@@ -1,0 +1,18 @@
+.vp-doc blockquote {
+  border-left: 4px solid rgb(100, 181, 135); /* 修改左边框颜色 */
+  background-color: rgba(253, 246, 246, 0.188);
+}
+
+.vp-doc blockquote > p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.custom-block.danger {
+  background-color: rgb(253, 246, 246);
+}
+
+:root {
+  --vp-code-line-highlight-color: rgba(0, 0, 0, 0.5);
+  --vp-code-copy-code-hover-bg: rgba(255, 255, 255, 0.05);
+}
