@@ -2,6 +2,7 @@ import { DefaultTheme } from "vitepress";
 import VueItems from "./vue";
 import ReactItems from "./react";
 import JavaScriptItems from "./javascript";
+import ComNetwork from "./comNetwork";
 
 export const defaultSidebar: DefaultTheme.SidebarGroup[] = [
   {
@@ -34,12 +35,8 @@ export const defaultSidebar: DefaultTheme.SidebarGroup[] = [
     collapsed: true,
   },
   {
-    text: "计算机网络",
-    items: [
-      { text: "HTTP历程", link: "/计算机网络/http" },
-      { text: "HTTPS详解", link: "/计算机网络/https" },
-      { text: "TCP协议精简", link: "/计算机网络/tcp" },
-    ],
+    text: `计算机网络 ${ComNetwork.length}篇`,
+    items: ComNetwork,
   },
   {
     text: "Examples",

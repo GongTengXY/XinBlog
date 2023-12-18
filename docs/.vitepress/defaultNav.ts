@@ -1,15 +1,16 @@
-import { DefaultTheme } from 'vitepress'
-import VueItems from './vue'
-import ReactItems from './react'
-import JavaScript from './javascript'
+import { DefaultTheme } from "vitepress";
+import VueItems from "./vue";
+import ReactItems from "./react";
+import JavaScript from "./javascript";
+import ComNetwork from "./comNetwork";
 
 export const defaultNav: DefaultTheme.NavItem[] = [
-  { text: '首页', link: '/' },
+  { text: "首页", link: "/" },
   {
-    text: '前端基础',
+    text: "前端基础",
     items: [
-      { text: 'HTML5精简', link: '/HTML5、CSS3/HTML5' },
-      { text: 'CSS3精简', link: '/HTML5、CSS3/CSS3' },
+      { text: "HTML5精简", link: "/HTML5、CSS3/HTML5" },
+      { text: "CSS3精简", link: "/HTML5、CSS3/CSS3" },
     ],
   },
   {
@@ -25,12 +26,8 @@ export const defaultNav: DefaultTheme.NavItem[] = [
     items: ReactItems,
   },
   {
-    text: '计算机网络',
-    items: [
-      { text: 'HTTP历程', link: '/计算机网络/http' },
-      { text: 'HTTPS详解', link: '/计算机网络/https' },
-      { text: 'TCP协议精简', link: '/计算机网络/tcp' },
-    ],
+    text: `计算机网络 ${ComNetwork.length}篇`,
+    items: ComNetwork,
   },
-  { text: 'Examples', link: '/markdown-examples' },
-]
+  { text: "Examples", link: "/markdown-examples" },
+];
