@@ -92,6 +92,7 @@ meta 标签是 html 标记 head 区域的一个非常关键且重要的标签。
 - 永久存储，除手动删除（只能存储字符串）
 
 ```js
+// 因只能存储字符串，所以需要使用JSON转化
 const info = JSON.stringify({ username: 'zs', age: 18 })
 // 存储
 localStorage.setItem('user', info)
@@ -128,6 +129,31 @@ localStorage.remove()
 <input type="url" />
 // 自动提示历史搜索
 <input type="search" />
+```
+
+## 自定义属性 data-
+
+HTML5 增加了一项新功能是 自定义数据属性 ，也就是`data-*` 自定义属性。在 HTML5 中我们可以使用以 `data-` 为前缀来设置我们需要的自定义属性，来进行一些数据的存放。当然高级浏览器下可通过脚本进行定义和数据存取。在项目实践中非常有用。
+
+HTML5 新增了个`dataset`属性来存取`data-* `自定义属性的值。这个`dataset`属性是 HTML5 JavaScript API 的一部分，用来返回一个所有选择元素 data- 属性的`DOMStringMap`对象
+
+```html
+<input
+  type="button"
+  value="按钮"
+  index="10"
+  data-index="10"
+  data-index-color="red"
+/>
+
+<script>
+  let btn = document.querySelector('input')
+  // 使用dataset方法获取自定义属性值并进行修改
+  console.log(btn.dataset.index) // 10
+  console.log(btn.dataset.indexColor) // red
+  btn.dataset.dataIndex = 20
+  console.log(btn.dataset.index) // 20
+</script>
 ```
 
 ## Web Worker

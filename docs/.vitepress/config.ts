@@ -1,20 +1,18 @@
-import { defineConfig } from 'vitepress'
-import { defaultSidebar } from './defaultSidebar'
-import { defaultNav } from './defaultNav'
+import { defineConfig } from "vitepress";
+import { defaultSidebar } from "./defaultSidebar";
+import { defaultNav } from "./defaultNav";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Blog',
-  description: 'XIN—Blog',
+  title: "Blog",
+  description: "XIN—Blog",
   lastUpdated: true,
   themeConfig: {
+    outline: [1, 3],
     nav: defaultNav,
     sidebar: defaultSidebar,
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
-    ],
     footer: {
-      copyright: 'Copyright © 2023-present XiaoXin',
+      copyright: "Copyright © 2023-present XiaoXin",
     },
   },
-})
+});

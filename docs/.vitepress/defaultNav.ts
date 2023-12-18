@@ -1,4 +1,7 @@
 import { DefaultTheme } from 'vitepress'
+import VueItems from './vue'
+import ReactItems from './react'
+import JavaScript from './javascript'
 
 export const defaultNav: DefaultTheme.NavItem[] = [
   { text: '首页', link: '/' },
@@ -10,15 +13,16 @@ export const defaultNav: DefaultTheme.NavItem[] = [
     ],
   },
   {
-    text: 'JavaScript',
-    items: [{ text: 'Js基础', link: '/JavaScript/Js基础' }],
+    text: `JavaScript ${JavaScript.length}篇`,
+    items: JavaScript,
   },
   {
-    text: 'Vue',
-    items: [
-      { text: 'Vue2响应式原理', link: '/Vue2/响应式原理' },
-      { text: 'Vue3', link: '/Vue3/' },
-    ],
+    text: `Vuejs ${VueItems.length}篇`,
+    items: VueItems,
+  },
+  {
+    text: `Reactjs ${ReactItems.length}篇`,
+    items: ReactItems,
   },
   {
     text: '计算机网络',
