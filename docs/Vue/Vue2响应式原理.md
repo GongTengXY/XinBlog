@@ -6,7 +6,7 @@ https://v2.cn.vuejs.org/v2/guide/reactivity.html
 
 在`Vue2.x`中响应式的实现是通过`Object.defineProperty`来完成的，手动将`data对象`中的所有属性进行`数据劫持`，将对象中的属性转换变成`getter/setter`形式,然后呢就形成了响应式数据，组件 `render` 函数会生成虚拟 `DOM` 树，影响到界面。`render` 运行的时候用到了响应式数据，于是收集了依赖，数据变化，会通知 `watcher`，`watcher` 会重新运行 `render` 函数。可参考此图。
 
-<img src="/v2Reactive.png"/>
+<img src="/Images/v2Reactive.png"/>
 
 单看这张图，大家可能看不明白。在 `vue2` 中是有几个核心模块的：
 
@@ -86,7 +86,7 @@ Dep 的含义是 Dependency，表示依赖的意思。 Vue 会为响应式对象
 
 功能：收集依赖，添加观察者(`watcher`)，通知所有观察者(派发更新)。
 
-<img src="/v2Dep.png" />
+<img src="/Images/v2Dep.png" />
 
 > 这里我截取一段我仿写的代码仅供参考理解
 
@@ -133,7 +133,7 @@ class Observer {
 
 每一个组件实例，都至少对应一个`watcher`，该 `watcher` 中记录了该组件的 `render` 函数。 `watcher` 首先会把 `render` 函数运行一次以收集依赖，于是那些在 `render` 中用到的响应式数据<span  style="color: rgb(100, 181, 135)">(就是那些在 Observer 中转换成响应式的数据，可参考仿写代码块)</span>就会记录这个`watcher`。 当数据变化时，`dep`就会通知该 `watcher`，而 `watcher` 将重新运行 `render` 函数，从而让界面重新渲染同时重新记录当前的依赖。
 
-<img src="/v2watcher.png" />
+<img src="/Images/v2watcher.png" />
 
 这就是 vue 巧妙的地方，利用观察者模式，设计 Dep 和 Watcher 来解决当某个使用到响应式数据时，响应式数据是无法知道是哪个地方在用自己的问题。
 

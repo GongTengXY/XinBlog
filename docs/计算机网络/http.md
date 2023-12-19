@@ -11,11 +11,11 @@
 网络分层的基本作用，来看看网络分层的几种方式。**标准的七层网络分层，也就是 OSI 七层模型。TCP/IP 五层模型和 TCP/IP 四层模型是从 OSI 七层优化而来**。
 
 首先看一下网络层级模型：
-<img src="/computer1.png" style="zoom:40%;margin-left:5%"/>
+<img src="/Images/computer1.png" style="zoom:40%;margin-left:5%"/>
 
 我们将 7 层中每个层对应的协议看一下：
 
-<img src="/computer2.png" style="zoom:40%;margin-left:5%"/>
+<img src="/Images/computer2.png" style="zoom:40%;margin-left:5%"/>
 
 ### 1、物理层：
 
@@ -59,7 +59,7 @@
 
 以 HTTP 请求为例，来梳理一下整个网络分层中各种的职责与处理流程。在整个通信过程中，就像俄罗斯套娃一样，一层层的包装起来，然后再一层层的打开。
 
-<img src="/computer3.png" style="margin-bottom:5%"/>
+<img src="/Images/computer3.png" style="margin-bottom:5%"/>
 
 ::: tip 经典面试题：从输入 url 地址到浏览器呈现分析
 1、对输入的 url 地址进行 DNS 域名解析获取 IP，先在浏览器本身的 DNS 缓存查找=>系统自身的 DNS 缓存=>电脑系统的 hosts 文件中查找=>递归地去域名服务器去查找。

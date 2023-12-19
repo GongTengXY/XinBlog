@@ -8,7 +8,7 @@
 
 HTTPS 的整体过程分为证书验证和数据传输阶段，具体的交互过程如下：
 
-<img src="/https1.png" style="zoom:50%;" />
+<img src="/Images/https1.png" style="zoom:50%;" />
 
 **① 证书验证阶段：**
 
@@ -101,6 +101,6 @@ decrypt(密文，私钥) = 明文
 
 TTP 协议被认为不安全是因为传输过程容易被监听者勾线监听、伪造服务器，而 HTTPS 协议主要解决的便是网络传输的安全性问题。首先我们假设不存在认证机构，任何人都可以制作证书，这带来的安全风险便是经典的“中间人攻击”问题。 凭下图理解：
 
-<img src="/https2.png" style="zoom:50%;" />
+<img src="/Images/https2.png" style="zoom:50%;" />
 
 > 多余的阐述不再多说，可根据此图理解

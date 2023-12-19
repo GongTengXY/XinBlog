@@ -6,13 +6,13 @@
 
 在目前 CSS3 中，我们是可以通过 <span style="color: rgb(100, 181, 135);fontWeight:600">box-sizing</span> 去设置对应的属性  
 `box-sizing:content-box;` **标准盒模型：**  
-<img src="/image-20210214150511841.png" style="zoom:35%; margin-left:5%"/>  
+<img src="/Images/image-20210214150511841.png" style="zoom:35%; margin-left:5%"/>  
 在标准盒模型下，元素的宽（width）和高（height）值即为盒模型中内容（content）的实际宽高值:  
 <span style="color: rgb(100, 181, 135);fontWeight:600">盒子宽度 = border 边框+padding 内边距+width</span>  
 <span style="color: rgb(100, 181, 135);fontWeight:600">页面占据宽度 = 盒子宽度+margin 外边距</span>
 
 `box-sizing:border-box;` **怪异盒模型：**  
-<img src="/image-20210214151037552.png" style="zoom:35%; margin-left:5%"/>  
+<img src="/Images/image-20210214151037552.png" style="zoom:35%; margin-left:5%"/>  
 在怪异盒模型下，元素的 width 和 height 值却不是 content 的实际宽高，而是去除 margin 后剩下的元素占用区域的宽高:  
 <span style="color: rgb(100, 181, 135);fontWeight:600">盒子宽度 = width</span>  
 <span style="color: rgb(100, 181, 135);fontWeight:600">页面占据宽度 = width+margin 外边距</span>

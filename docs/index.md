@@ -2,10 +2,10 @@
 layout: home
 
 hero:
-  name: '小新'
-  text: '前端博客'
+  name: "小新"
+  text: "前端博客"
   image:
-    src: /myPhoto.ico
+    src: /Images/myPhoto.ico
     alt: 前端历险记
   actions:
     - theme: brand

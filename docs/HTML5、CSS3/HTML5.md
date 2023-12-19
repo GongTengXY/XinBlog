@@ -74,12 +74,12 @@ meta 标签是 html 标记 head 区域的一个非常关键且重要的标签。
 ```html
 // 关于audio的属性可访问链接：https://www.runoob.com/tags/tag-audio.html
 <audio
-  src=""
+  src="/Images"
   controls="controls"
 ></audio>
 // 关于video的属性可访问链接：https://www.runoob.com/tags/tag-video.html
 <video
-  src=""
+  src="/Images"
   controls="controls"
 ></video>
 ```
