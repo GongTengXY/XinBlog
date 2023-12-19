@@ -1,29 +1,37 @@
+# 根目录新建一个deploy.sh文件
+#!/bin/bash
 
-#!/usr/bin/env sh
+git checkout -b temp
+pnpm
+pnpm build
+# 创建一个临时目录用于保存构建生成的静态文件
+mkdir temp_deploy
 
-# 确保脚本抛出遇到的错误
-set -e
+# 将构建生成的静态文件复制到临时目录
+cp -r docs/.vitepress/dist/* temp_deploy
 
-# 生成静态文件
-npm run docs:build
+find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name '.gitignore' ! -name 'temp_deploy' -exec rm -rf {} \;
+git add .
+git commit -m "deploy"
 
-# 进入生成的文件夹
-cd docs/.vitepress/dist
+git checkout gh-pages
 
-# 如果是发布到自定义域名
-# echo 'www.example.com' > CNAME
+find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 
-git init
-git branch -m master main
-git add -A
+git add .
+git commit -m "deploy"
+
+git merge temp
+
+find . -mindepth 1 -maxdepth 1 ! -name '.git' ! -name '.gitignore' ! -name 'temp_deploy' -exec rm -rf {} \;
+
+mv temp_deploy/* .
+
+rm -rf temp_deploy
+
+git add .
 git commit -m 'deploy'
+git push
 
-# 如果发布到 https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
-
-# 如果发布到 https://<USERNAME>.github.io/<REPO>
-
-git push -f git@github.com:GongTengXY.github.io.git main
-
-cd -
-
+git branch -D temp
+git checkout -b master
