@@ -5,6 +5,7 @@ import { defaultNav } from "./defaultNav";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Blog",
+  base: "XinBlog",
   description: "XIN—Blog",
   lastUpdated: true,
   themeConfig: {
