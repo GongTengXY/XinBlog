@@ -1,9 +1,5 @@
 # HTTPS 详解
 
-::: danger
-写作中
-:::
-
 我们在 http 历程篇说到以此`http://www.baidu.com/`为例子，其实我们在访问百度的时候，不管你输入的是 http 还是 https 协议都会被转成`https协议`。为什么大家都要使用 `https协议` ？ 大家都说 `https协议` 安全，这篇就可以知道为什么 https 安全
 
 ## HTTPS 实现原理

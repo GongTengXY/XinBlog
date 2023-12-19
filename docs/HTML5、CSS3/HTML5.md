@@ -1,9 +1,5 @@
 # HTML5 精简版
 
-::: danger
-写作中
-:::
-
 ## HTML 规范
 
 首先 **HTML** 超文本标记语言：是一个标记语言，是有对应的语法标准<br>这也就是为什么，我们在 html 文件中的最上方要加上 `<!DOCTYPE html> `这样的字样
@@ -36,7 +32,10 @@ meta 标签是 html 标记 head 区域的一个非常关键且重要的标签。
 
 ```html
 // 设置网页关键词（利用SEO）
-<meta name="keywords" content="电商,好货,便宜" />
+<meta
+  name="keywords"
+  content="电商,好货,便宜"
+/>
 // 设置 http 响应头：Content-Type 网页内容类型
 <meta charset="utf-8" />
 // 设置网页视口（viewport）控制视⼝的⼤⼩、缩放和⽐例
@@ -74,9 +73,15 @@ meta 标签是 html 标记 head 区域的一个非常关键且重要的标签。
 
 ```html
 // 关于audio的属性可访问链接：https://www.runoob.com/tags/tag-audio.html
-<audio src="" controls="controls"></audio>
+<audio
+  src=""
+  controls="controls"
+></audio>
 // 关于video的属性可访问链接：https://www.runoob.com/tags/tag-video.html
-<video src="" controls="controls"></video>
+<video
+  src=""
+  controls="controls"
+></video>
 ```
 
 > 以上，都挺难看的且 video 有时候可能播放不出来（视频流格式问题）  
@@ -93,13 +98,13 @@ meta 标签是 html 标记 head 区域的一个非常关键且重要的标签。
 
 ```js
 // 因只能存储字符串，所以需要使用JSON转化
-const info = JSON.stringify({ username: 'zs', age: 18 })
+const info = JSON.stringify({ username: "zs", age: 18 });
 // 存储
-localStorage.setItem('user', info)
+localStorage.setItem("user", info);
 // 读取
-JSON.parse(localStorage.getItem('user'))
+JSON.parse(localStorage.getItem("user"));
 // 手动移除
-localStorage.remove()
+localStorage.remove();
 ```
 
 ## Input
@@ -109,8 +114,14 @@ localStorage.remove()
 属性 placeholder 表示提示信息
 
 ```html
-<input type="text" placeholder="请输入用户名" />
-<input type="password" placeholder="请输入密码" />
+<input
+  type="text"
+  placeholder="请输入用户名"
+/>
+<input
+  type="password"
+  placeholder="请输入密码"
+/>
 ```
 
 ### 新增 type
@@ -147,12 +158,12 @@ HTML5 新增了个`dataset`属性来存取`data-* `自定义属性的值。这�
 />
 
 <script>
-  let btn = document.querySelector('input')
+  let btn = document.querySelector("input");
   // 使用dataset方法获取自定义属性值并进行修改
-  console.log(btn.dataset.index) // 10
-  console.log(btn.dataset.indexColor) // red
-  btn.dataset.dataIndex = 20
-  console.log(btn.dataset.index) // 20
+  console.log(btn.dataset.index); // 10
+  console.log(btn.dataset.indexColor); // red
+  btn.dataset.dataIndex = 20;
+  console.log(btn.dataset.index); // 20
 </script>
 ```
 
@@ -163,16 +174,16 @@ HTML5 新增了个`dataset`属性来存取`data-* `自定义属性的值。这�
 ```js
 // 这里是main.js。此为主线程内。
 // 初始化创建worker
-const worker = new Worker(path) // path代表worker的js脚本地址
+const worker = new Worker(path); // path代表worker的js脚本地址
 // 主线程与 worker 线程都是通过 postMessage 方法来发送消息，以及监听 message 事件来接收消息
-worker.addEventListener('message', (e) => {
+worker.addEventListener("message", (e) => {
   // 接收消息
-  console.log(e.data) // Greeting from Worker.js，worker线程返回的结果
-})
+  console.log(e.data); // Greeting from Worker.js，worker线程返回的结果
+});
 // 主线程对worker线程发送消息
-worker.postMessage('快点计算')
+worker.postMessage("快点计算");
 // 关闭worker线程
-worker.terminate()
+worker.terminate();
 ```
 
 > worker 线程是独立的，不可以操作 dom，也没有 document 对象。worker 有一个全局对象 WorkerGlobalScope，window 上的很多属性方法存在 WorkerGlobalScope 中
