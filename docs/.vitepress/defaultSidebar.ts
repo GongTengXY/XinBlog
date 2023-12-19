@@ -26,7 +26,7 @@ export const defaultSidebar: DefaultTheme.SidebarGroup[] = [
     text: `Vuejs ${VueItems.length}篇`,
     collapsible: true,
     items: VueItems,
-    collapsed: true,
+    collapsed: false,
   },
   {
     text: `Reactjs ${ReactItems.length}篇`,
@@ -37,12 +37,5 @@ export const defaultSidebar: DefaultTheme.SidebarGroup[] = [
   {
     text: `计算机网络 ${ComNetwork.length}篇`,
     items: ComNetwork,
-  },
-  {
-    text: "Examples",
-    items: [
-      { text: "Markdown Examples", link: "/markdown-examples" },
-      { text: "Runtime API Examples", link: "/api-examples" },
-    ],
   },
 ];

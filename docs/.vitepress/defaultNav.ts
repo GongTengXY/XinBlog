@@ -29,5 +29,4 @@ export const defaultNav: DefaultTheme.NavItem[] = [
     text: `计算机网络 ${ComNetwork.length}篇`,
     items: ComNetwork,
   },
-  { text: "Examples", link: "/markdown-examples" },
 ];

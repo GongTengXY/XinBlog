@@ -12,7 +12,10 @@ export default defineConfig({
     nav: defaultNav,
     sidebar: defaultSidebar,
     footer: {
-      copyright: "Copyright © 2023-present XiaoXin",
+      copyright: "Copyright © 2023-present GongTengXY",
     },
+    socialLinks: [
+      { icon: "github", link: "https://github.com/GongTengXY/XinBlog" },
+    ],
   },
 });
