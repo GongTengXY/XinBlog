@@ -3,7 +3,7 @@
 
 git checkout -b temp
 pnpm install
-pnpm run build
+pnpm run docs:build
 # 创建一个临时目录用于保存构建生成的静态文件
 mkdir temp_deploy
 
