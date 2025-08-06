@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a,a as c}from"./app.5acfab91.js";const k=JSON.parse('{"title":"React Hooks","description":"","frontmatter":{},"headers":[],"relativePath":"React/React_hooks.md","lastUpdated":1741504244000}'),o={name:"React/React_hooks.md"},s=c("",2),r=[s];function _(n,d,i,p,h,l){return t(),a("div",null,r)}const m=e(o,[["render",_]]);export{k as __pageData,m as default};
