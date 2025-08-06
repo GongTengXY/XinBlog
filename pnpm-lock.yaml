@@ -6,7 +6,7 @@ settings:
 
 devDependencies:
   vitepress:
-    specifier: ^1.0.0-alpha.33
+    specifier: 1.0.0-alpha.33
     version: 1.0.0-alpha.33(@algolia/client-search@4.22.0)(search-insights@2.13.0)
   vue:
     specifier: ^3.3.4
